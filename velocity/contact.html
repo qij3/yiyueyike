@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->  
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->  
+<!--[if !IE]><!--> <html lang="en"> <!--<![endif]-->  
+<head>
+    <title>Responsive website template for products</title>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">    
+    <link rel="shortcut icon" href="favicon.ico">  
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic,300italic,300' rel='stylesheet' type='text/css'> 
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
+    <!-- Global CSS -->
+    <link rel="stylesheet" href="assets/plugins/bootstrap/css/bootstrap.min.css">   
+    <!-- Plugins CSS -->    
+    <link rel="stylesheet" href="assets/plugins/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="assets/plugins/flexslider/flexslider.css">
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/styles.css">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head> 
+
+<body class="contact-page">
+    <div class="wrapper">
+        <!-- ******HEADER****** --> 
+        <header id="header" class="header">  
+            <div class="container">       
+                <h1 class="logo">
+                    <a href="index.html"><span class="text">1月1课</span></a>
+                </h1><!--//logo-->
+                <nav class="main-nav navbar-right" role="navigation">
+                    <div class="navbar-header">
+                        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button><!--//nav-toggle-->
+                    </div><!--//navbar-header-->
+                    <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active nav-item"><a href="index.html">首页</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-delay="0" data-close-others="false" href="#">课程 <i class="fa fa-angle-down"></i></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="feature.html">Django 课程</a></li>
+                                    <li><a href="blog.html">C++ 课程</a></li>
+                                    <li><a href="blog-single.html">ios 课程</a></li>
+                                </ul>                            
+                            </li><!--//dropdown-->                         
+                            <li class="nav-item"><a href="about.html">关于我们</a></li>
+                            <li class="nav-item"><a href="contact.html">秋野</a></li>
+                                <ul class="dropdown-menu">
+                                    <li><a href="profiles.html">账户管理</a></li>
+                                    <li><a href="#">退出</a></li>
+                                </ul>                            
+                        </ul><!--//nav-->
+                    </div><!--//navabr-collapse-->
+                </nav><!--//main-nav-->                     
+            </div><!--//container-->
+        </header><!--//header-->
+        
+        <div class="headline-bg contact-headline-bg">
+        </div><!--//headline-bg-->
+
+        
+        <!-- ******Contact Section****** --> 
+        <section class="contact-section section section-on-bg">
+            <div class="container">
+                <h2 class="title text-center">联系我们</h2>
+                <p class="intro text-center">我们想倾听您的意见, 不要犹豫提出您的宝贵建议.</p>
+                <form id="contact-form" class="contact-form" method="post" action="">                    
+                    <div class="row text-center">
+                        <div class="contact-form-inner col-md-8 col-sm-12 col-xs-12 col-md-offset-2 col-sm-offset-0 xs-offset-0">
+                            <div class="row">                                                           
+                                
+                                <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+                                    <label class="sr-only" for="cname">姓名</label>
+                                    <input type="text" class="form-control" id="cname" name="name" placeholder="姓名" minlength="2" required>
+                                </div>                    
+                                <div class="col-md-6 col-sm-6 col-xs-12 form-group">
+                                    <label class="sr-only" for="cemail">Email address</label>
+                                    <input type="email" class="form-control" id="cemail" name="email" placeholder="邮箱地址" required>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                    <label class="sr-only" for="cmessage">Your message</label>
+                                    <textarea class="form-control" id="cmessage" name="message" placeholder="评论" rows="12" required></textarea>
+                                </div>
+                                 <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                    <button type="submit" class="btn btn-block btn-cta btn-cta-primary">发送</button>
+                                </div>                           
+                            </div><!--//row-->
+                        </div>
+                    </div><!--//row-->
+                    <div id="form-messages"></div>
+                </form><!--//contact-form-->
+            </div><!--//container-->
+        </section><!--//contact-section-->
+        
+        <!-- ******Other Contact Section****** --> 
+        <section class="contact-other-section section">
+            <div class="container text-center">
+                <h2 class="title">其他联系方式</h2>
+                <p class="intro">您还可以通过以下几个方式联系到我们. </p>
+                <div class="row">
+                    <ul class="other-info list-unstyled col-md-6 col-sm-10 col-xs-12 col-md-offset-3 col-sm-offset-1 xs-offset-0" >
+                        <li><i class="fa fa-envelope-o"></i><a href="#">qiuye0827@gmail.com</a></li>
+                        <li><i class="fa fa-twitter"></i><a href="https://weibo.com" target="_blank">@weibo_qiuye</a></li>
+                        <li><i class="fa fa-twitter"></i><a href="https://qq.com" target="_blank">@qq_qiuye</a></li>
+                        <li><i class="fa fa-phone"></i><a href="tel:+0800123456">412 304 5003</a></li>
+                    </ul>
+                </div><!--//row-->
+            </div><!--//container-->
+        </section><!--//contact-other-section-->
+        
+        <!-- ******Map Section****** --> 
+        
+        <!-- ******CTA Section****** -->
+        <section id="cta-section" class="section cta-section text-center home-cta-section">
+            <div class="container">
+                <h2 class="title">小伙伴们， 准备好了吗? </h2>
+                <p class="intro">现在立即和其他 <span class="counting">300,000</span> 学员一起来学习吧 ~</p>
+                <p><a class="btn btn-cta btn-cta-primary" href="http://themes.3rdwavemedia.com/website-templates/responsive-bootstrap-theme-for-products-velocity/" target="_blank">开始课程</a></p>
+            </div><!--//container-->
+        </section><!--//cta-section-->
+
+    </div><!--//wrapper-->
+    
+    <!-- ******FOOTER****** --> 
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="container">
+                <div class="row">                    
+                    <div class="footer-col links col-md-2 col-sm-4 col-xs-12">
+                        <div class="footer-col-inner">
+                            <h3 class="title">关于我们</h3>
+                            <ul class="list-unstyled">
+                                <li><a href="about.html"><i class="fa fa-caret-right"></i>我们的故事</a></li>
+                                <li><a href="blog.html"><i class="fa fa-caret-right"></i>博客</a></li>
+                                <li><a href="contact.html"><i class="fa fa-caret-right"></i>联系我们</a></li>
+                            </ul>
+                        </div><!--//footer-col-inner-->
+                    </div><!--//foooter-col-->    
+                    <div class="footer-col links col-md-2 col-sm-4 col-xs-12">
+                        <div class="footer-col-inner">
+                            <h3 class="title">课程</h3>
+                            <ul class="list-unstyled">
+                                <li><a href="#"><i class="fa fa-caret-right"></i>Python Django 课程</a></li>
+                                <li><a href="#"><i class="fa fa-caret-right"></i>C++ 课程</a></li>
+                                <li><a href="#"><i class="fa fa-caret-right"></i>IOS 课程</a></li>
+                            </ul>
+                        </div><!--//footer-col-inner-->
+                    </div><!--//foooter-col-->              
+                    <div class="footer-col links col-md-2 col-sm-4 col-xs-12 sm-break">
+                        <div class="footer-col-inner">
+                            <h3 class="title">合作伙伴</h3>
+                            <ul class="list-unstyled">
+                                <li><a href="https://qq.com"><i class="fa fa-caret-right"></i>腾讯</a></li>
+                                <li><a href="https://alibaba.com"><i class="fa fa-caret-right"></i>阿里巴巴</a></li>
+                                <li><a href="https://baidu.com"><i class="fa fa-caret-right"></i>百度</a></li>
+                            </ul>
+                        </div><!--//footer-col-inner-->            
+                    </div><!--//foooter-col-->   
+                    <div class="footer-col connect col-md-6 col-sm-12 col-xs-12">
+                        <div class="footer-col-inner">
+                            <ul class="social list-inline">
+                                <li><a href="https://twitter.com/3rdwave_themes" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                            </ul>
+                            <div class="form-container">
+                                <p class="intro">获取最新动态 -- 包括课程更新以及新鲜博客</p>
+                                <form class="signup-form navbar-form">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="邮箱地址">
+                                    </div>   
+                                    <button type="submit" class="btn btn-cta btn-cta-primary">订阅</button>                                 
+                                </form>                               
+                            </div><!--//subscription-form-->
+                        </div><!--//footer-col-inner-->
+                    </div><!--//foooter-col-->
+                    <div class="clearfix"></div> 
+                </div><!--//row-->
+            </div><!--//container-->
+        </div><!--//footer-content-->
+        <div class="bottom-bar">
+            <div class="container">
+                <small class="copyright">Copyright @ 1月1课</small>                
+            </div><!--//container-->
+        </div><!--//bottom-bar-->
+    </footer><!--//footer-->
+    
+    <!-- *****CONFIGURE STYLE****** -->  
+    <div class="config-wrapper">
+        <div class="config-wrapper-inner">
+            <a id="config-trigger" class="config-trigger" href="#"><i class="fa fa-cog"></i></a>
+            <div id="config-panel" class="config-panel">
+                <h5>Choose Colour</h5>
+                <ul id="color-options" class="list-unstyled list-inline">
+                    <li class="theme-1 active" ><a data-style="assets/css/styles.css" href="#"></a></li>
+                    <li class="theme-2"><a data-style="assets/css/styles-2.css" href="#"></a></li>
+                    <li class="theme-3"><a data-style="assets/css/styles-3.css" href="#"></a></li>
+                    <li class="theme-4"><a data-style="assets/css/styles-4.css" href="#"></a></li>                   
+                    <li class="theme-5"><a data-style="assets/css/styles-5.css" href="#"></a></li>                     
+                    <li class="theme-6"><a data-style="assets/css/styles-6.css" href="#"></a></li>
+                    <li class="theme-7"><a data-style="assets/css/styles-7.css" href="#"></a></li>
+                    <li class="theme-8"><a data-style="assets/css/styles-8.css" href="#"></a></li>                    
+                    <li class="theme-9"><a data-style="assets/css/styles-9.css" href="#"></a></li>
+                    <li class="theme-10"><a data-style="assets/css/styles-10.css" href="#"></a></li>
+                </ul><!--//color-options-->
+                <a id="config-close" class="close" href="#"><i class="fa fa-times-circle"></i></a>
+            </div><!--//configure-panel-->
+        </div><!--//config-wrapper-inner-->
+    </div><!--//config-wrapper-->
+ 
+    <!-- Javascript -->          
+    <script type="text/javascript" src="assets/plugins/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
+    <script type="text/javascript" src="assets/plugins/bootstrap-hover-dropdown.min.js"></script>
+    <script type="text/javascript" src="assets/plugins/back-to-top.js"></script>
+    <script type="text/javascript" src="assets/plugins/jquery-placeholder/jquery.placeholder.js"></script>
+    <script type="text/javascript" src="assets/plugins/FitVids/jquery.fitvids.js"></script>
+    <script type="text/javascript" src="assets/plugins/flexslider/jquery.flexslider-min.js"></script> 
+    
+    <!-- contact page specific js starts -->
+    <script type="text/javascript" src="assets/plugins/jquery.validate.min.js"></script>       
+    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script> 
+    <script type="text/javascript" src="assets/plugins/gmaps/gmaps.js"></script> 
+    <script type="text/javascript" src="assets/js/contact.js"></script>  
+    <script type="text/javascript" src="assets/js/map.js"></script>
+    <!-- contact page specific js ends-->  
+      
+    <script type="text/javascript" src="assets/js/main.js"></script>
+    
+            
+</body>
+</html> 
+
