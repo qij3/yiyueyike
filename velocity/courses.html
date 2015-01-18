@@ -54,6 +54,7 @@
                             </a>                    
                         </li>
                     </ul><!--//nav-->
+                    
                 </div><!--//navabr-collapse-->
             </nav><!--//main-nav-->
         </div><!--//container-->
@@ -70,112 +71,178 @@
         <br><br>
         </br></br>
 
-    <div class="container">
-    <!-- ******Course****** --> 
-        <h1>玩转 GIT</h1>
-            <ul class="nav nav-tabs">
-                <li class="active">
-                    <a data-toggle="tab" href="#step-notes"></a>
+    <div class="container step-container">
+      <ul class="nav nav-pills navbar-right" id="playback_speeds" style="display:none;" data-speed="1.0" data-name="1x">
+          <li class="dropdown">
+            <a id="playback_speed_drop" role="button" data-toggle="dropdown" href="#">Speed <span class="caret"></span></a>
+            <ul id="playback_speed_menu" class="dropdown-menu" role="menu" aria-labelledby="playback_speed_drop">
+                <li role="presentation">
+                  <a tabindex="-1" role="menuitem" data-speed="0.5" data-name="Drunk Mode" href="#">Drunk Mode</a>
+                </li>
+                <li role="presentation">
+                  <a tabindex="-1" role="menuitem" data-speed="0.75" data-name="0.75x" href="#">0.75x</a>
+                </li>
+                <li role="presentation">
+                  <a tabindex="-1" role="menuitem" data-speed="1.0" data-name="1x" href="#">1x</a>
+                </li>
+                <li role="presentation">
+                  <a tabindex="-1" role="menuitem" data-speed="1.25" data-name="1.25x" href="#">1.25x</a>
+                </li>
+                <li role="presentation">
+                  <a tabindex="-1" role="menuitem" data-speed="1.5" data-name="1.5x" href="#">1.5x</a>
+                </li>
+                <li role="presentation">
+                  <a tabindex="-1" role="menuitem" data-speed="2.0" data-name="2x" href="#">2x</a>
                 </li>
             </ul>
-        <div class="tab-content">
-            <div class="tab-pane active" id="step-notes">
+          </li>
+      </ul>
 
-              <div class="bs-callout bs-callout-danger">
-                <h4>Changing the icon font location</h4>
-                <p>Bootstrap assumes icon font files will be located in the <code>../fonts/</code> directory, relative to the compiled CSS files. Moving or renaming those font files means updating the CSS in one of three ways:</p>
-                <ul>
-                  <li>Change the <code>@icon-font-path</code> and/or <code>@icon-font-name</code> variables in the source Less files.</li>
-                  <li>Utilize the <a href="http://lesscss.org/usage/#command-line-usage-relative-urls">relative URLs option</a> provided by the Less compiler.</li>
-                  <li>Change the <code>url()</code> paths in the compiled CSS.</li>
-                </ul>
-                <p>Use whatever option best suits your specific development setup.</p>
-              </div>
+      <h1>The Command Line</h1>
+      <br></br>
+      <div class="tabbable">
+      <ul class="nav nav-tabs">
+        <li class="active">
+          <a data-toggle="tab" href="#step-notes">Lesson Notes</a>
+        </li>
+          <li>
+            <a data-toggle="tab" href="#troubleshooting">Troubleshooting</a>
+          </li>
+        <li>
+          <a data-toggle="tab" href="#comments">Support</a>
+        </li>
+      </ul>
 
-            <h3>Resources:</h3>
+    <!-- ******Lesson Notes Tab****** --> 
+      <div class="tab-content">
+        <div class="tab-pane active" id="step-notes">
+         <br>
+         <p class="lead">The command line can be a scary place for beginners, but there are only a handful of commands you'll need to know in order to use it including pwd, cd, and ls.</p>
+
+         <div class= id="step-content">           
+           <h3>1. Open the Command Line</h3>
+              <ul>
+              <li>On Mac you can go to spotlight "Terminal" and add to your dock.</li>
+              <li>On PC you can search for Gitbash (a program that comes with Rails installer).</li>
+              </ul>
+              <h3>2. Customize your Terminal (<i class="fa fa-apple"></i> Only)</h3>
+              <ol>
+              <li>Terminal -&gt; Preferences -&gt; Settings</li>
+              <li>Select the "Homebrew" theme on the left side</li>
+              <li>Click "Change" and increase the font size to 18px</li>
+              <li>Choose "Default"</li>
+              </ol>
+              <h3>3. Learn these basic commands</h3>
+              <pre><code class="prettyprint lang-scm prettyprinted"><span class="pln">
+              $ </span><a href="#" id="railsserver" rel="popover" data-container="body" data-title="pwd" data-content="Shows your where you are on your computer. Aka. which folder or directory you are in. (2:50)" data-original-title="" title=""><span class="pln">pwd</span></a><span class="pln">
+              $ </span><a href="#" id="railsserver" rel="popover" data-container="body" data-title="open ." data-content="Open the finder and show you all the files in that director. The period means ALL" data-original-title="" title=""><span class="pln">open </span><span class="pun">.</span></a><span class="pln"> </span><span class="com">#this is for Mac only. On a Window's PC try "start ." instead of open</span><span class="pln">
+              $ </span><a href="#" id="railsserver" rel="popover" data-container="body" data-title="ls" data-content="It shows you what is inside of the folder (5:00)" data-original-title="" title=""><span class="pln">ls</span></a><span class="pln"> </span><a href="#" id="railsserver" rel="popover" data-container="body" data-title="What's this # symbol?" data-content="If you see a # with words to the right of it, that is a comment. Sometimes we developer use them to make little notes. Occasionally I add these comments for you in the lecture notes" data-original-title="" title=""><span class="com"># Stands for list. Also, this is a comment.</span></a><span class="pln">
+              $ </span><a href="#" id="railsserver" rel="popover" data-container="body" data-title="cd + the name of the file you are in" data-content="Allows you to move into that folder" data-original-title="" title=""><span class="pln">cd </span><span class="typ">Desktop</span></a><span class="pln"> 
+              $ </span><a href="#" id="railsserver" rel="popover" data-container="body" data-title="cd ~" data-content="Brings you back to the root (or top of your folder structure)" data-original-title="" title=""><span class="pln">cd </span><span class="pun">~</span></a><span class="pln">
+              $ </span><a href="#" id="railsserver" rel="popover" data-container="body" data-title="ls -a" data-content="Similar to ls, but by adding -a you can also list hidden files" data-original-title="" title=""><span class="pln">ls </span><span class="pun">-</span><span class="pln">a</span></a>
+              </code></pre>
+              <h3>4. Permission denied error? (<i class="fa fa-apple"></i> Only)&nbsp;<a href="#" onclick="wistiaEmbed.time(685);return true;" rel="tooltip" data-placement="right" title="" data-original-title="Jump to 11:25"><i class="fa fa-clock-o"></i></a></h3>
+              <p>If you get a permissions error somewhere along the line, you might be able to use "sudo", which is your super user account (aka. it's like the admin of your computer that has all the privileges.) For example:</p>
+              <pre><code class="prettyprint lang-scm prettyprinted"><span class="pln">$ sudo cd </span><span class="typ">Desktop</span></code></pre>
+              <h3>5. Read Additional Resources (optional)</h3>
+              <p><a href="http://cli.learncodethehardway.org/book/" target="_blank">Zed Shaw's The Command Line Crash Course</a> - this is a great online course and only takes a few hours to get through. If you're short on time I'd recommend you go as far as the lesson on <a href="http://cli.learncodethehardway.org/book/ex11.html" target="_blank">"Moving A File (mv)"</a>.
+              <script>// <![CDATA[
+              $('a[rel="popover"').on('click', function(e) {e.preventDefault(); return true;});
+              // ]]></script>
+              </p>
+             
+          </div>
+        <div class="text-right">
+          <span id="update-step-progress"></span>
+        </div>
+        <h1><a class="btn btn-cta btn-cta-primary" href="signup.html">完成继续</a></h1> 
+      </div>
+
+    <!-- ******Q & A Tab****** --> 
+      <div class="tab-pane" id="troubleshooting">
+          <h3>Q: Why isn't "open" working on Windows?</h3>
+          <p>Use "start ." instead. This will work on Windows when you are using the Git Bash command line.</p>
+          <h3>Q: Why isn't "open" working on Ubuntu?</h3>
+          <p>Open isn't a command in Debian systems.</p>
+          <p>Use "xdg-open" instead. However, "xdg-open ." does not open current directory.</p>
+      </div>
+
+    <!-- ******Feedback Tab****** --> 
+      <div class="tab-pane" id="comments">
+        <div class="bs-callout bs-callout-info" id="callout-alerts-dismiss-plugin">
+          <div class="row">
+            <div class="col-md-12">
+              <h3>Before You Ask</h3>
+          </div>
+          <div class="col-md-6">
+            <strong>Tips for Finding Solutions</strong>
             <ul>
-                <li><a href="http://pcottle.github.io/learnGitBranching/" target="_blank">The Git Game</a></li>
-                <li><a href="https://try.github.io" target="_blank">Try Git</a>&nbsp;by Code School</li>
+              <li>Check out <a href="#" rel="popover" data-container="body" data-content=" Most lectures have a troubleshooting tab below the video, but not every  lecture will have it." data-original-title="I don't see a troubleshooting tab?">the troubleshooting tab</a> for this lesson (if there is one)</li>
+              <li>Search <a href="http://www.google.com" target="_blank">Google</a> and <a href="http://stackoverflow.com" target="_blank">Stack Overflow</a>, or even <a href="http://stackoverflow.com/" target="_blank">post a question</a></li>
+
+
+                <li>Read your error message: <a href="http://blog.onemonthrails.com/4-debugging-techniques-every-developer-should-know-markdown/" target="_blank">watch this video to learn how</a></li>
+                <li>Did you run your database migrations <a href="#" rel="popover" data-container="body" data-content="$ rake db:migrate" data-original-title="How do I run a local migration?">locally</a> and on <a href="#" rel="popover" data-container="body" data-content="$ heroku run rake db:migrate" data-original-title="How do I run a Heroku migration?">Heroku</a>?</li>
+                <li>Read the <a href="http://api.rubyonrails.org/" target="_blank">Rails</a>, <a href="//devcenter.heroku.com" target="_blank">Heroku</a>, or <a href="//rubygems.org/gems" target="_blank">gem</a> documentation</li>
+                <li>Check your <a href="//devcenter.heroku.com/articles/error-codes" target="_blank">Heroku logs</a> and <a href="//developers.google.com/chrome-developer-tools/docs/console" target="_blank"> Chrome's DevTools Console</a></li>
+                <li>Try a different brower, like <a href="https://www.google.com/intl/en/chrome/browser/" target="_blank">Google Chrome</a>.</li>
             </ul>
-            <h3>1. Understand basic terminal commands</h3>
-            <pre><code>$ <a href="#" rel="popover" data-container="body" data-content="Lists all files in a directory" data-original-title="ls">ls</a>
-            </code></pre>
-            <h3>2. Configure Git on a new computer <a href="#" onclick="wistiaEmbed.time(144);return true;" rel="tooltip" data-placement="right" title="" data-original-title="Jump to 2:24"><i class="icon-time"></i></a>
-            </h3>
-            <p>We only do this once per computer</p>
-            <p class="text-muted"><em>terminal</em></p>
-<pre><code>$ git config --global user.name <a href="#" rel="popover" data-container="body" data-content="That's my name, you should write your own!" data-original-title="Set Your Name With Git">"Mattan Griffel"</a>
-$ <a href="#" rel="popover" data-container="body" data-content="Checks that your name has been entered into Git. Type this line and press enter to see for yourself.">git config --global user.name</a>
-$ git config --global user.email <a href="#" rel="popover" data-container="body" data-content="This is just for you and your Git account. Don't worry, no one is going to spam you." data-original-title="Set Your Email With Git">"mattan@onemonthrails.com"</a>
-$ <a href="#" rel="popover" data-container="body" data-content="Checks that your email has been entered, give it a try!">git config --global user.email</a>
-</code></pre>
-            <h3>3. Setting up Git in a&nbsp;new project <a href="#" onclick="wistiaEmbed.time(372);return true;" rel="tooltip" data-placement="right" title="" data-original-title="Jump to 6:12"><i class="icon-time"></i></a></h3>
-            <p>We only do this once in the beginning of every new project</p>
-            <p class="text-muted"><em>terminal</em></p>
-<pre><code>$ git <a href="#" rel="popover" data-container="body" data-content="Nope, it's not a lazy way of saying, isn't it. Init stands for initialize. You just do this once each time you start a new Rails project to kick things off" data-original-title="Init">init</a>
-$ git status #shows you what files you are tracking (or not tracking) 
-$ git add . 
-$ git commit -am <a href="#" rel="popover" data-container="body" data-content="You can write anything you want in here. It's just a message for your logs. Initial Commit is often the first message developers make" data-original-title="Commit Message">"initial commit"</a> 
-</code></pre>
-            <h3>4. Edit your .gitignore file</h3>
-            <p class="text-muted"><em>/.gitignore</em></p>
-            <p>Add <code>.DS_Store</code> to your /.gitignore file so that git doesn't keep track of this random file.(<i class="icon-apple"></i> Only)</p>
-<pre><code><a href="#" rel="popover" data-container="body" data-content="This means there is likely more code above">...</a>
-# Ignore all logfiles and tempfiles.
-/log/*.log
-/tmp
-.DS_Store
-</code></pre>
-            <hr />
-            <h3>Q: Oops!&nbsp;I deleted something in my code I shouldn't have!&nbsp;<a href="#" onclick="wistiaEmbed.time(799);return true;" rel="tooltip" data-placement="right" title="" data-original-title="Jump to 13:19"><i class="icon-time"></i></a></h3>
-            <p>Here's how to get it back.</p>
-            <p class="text-muted"><em>terminal <a href="#" rel="popover" data-container="body" data-content="Hit the UP ARROW key in terminal to see the last command you entered." data-original-title="PRO TIP:"><i class="icon-ticket"></i></a></em></p>
-<pre><code>$ git add . 
-$ <a href="#" rel="popover" data-container="body" data-content="Allows you to revert back 1 commit. In case you make a mistake." data-original-title="git checkout -f">git checkout -f</a>
-</code></pre>
-            <h3>Check out This great practice resource for learning git:</h3>
-            <p><a href="https://try.github.io">try.github.io</a></p>
+          </div>
+
+        <div class="col-md-6">
+          <strong>Asking Questions</strong>
+          <ul>
+            <li>Be clear, concise and descriptive</li>
+            <li>List the error message</li>
+            <li>List the course and step (if not already listed)</li>
+            <li>Link to your GitHub repo and Heroku page</li>
+            <li>Edit your post with the solution if you find it</li>
+          </ul>
+          You can also email <a href="mailto:teachers@onemonth.com">teachers@onemonth.com</a>
         </div>
 
-        <h1><a class="btn btn-cta btn-cta-primary" href="signup.html">完成继续</a></h1>   
-
-    <!-- ******Q & A Section****** --> 
-        <br></br>
-        <h1>有任何问题 ？</h1>
-            <ul class="nav nav-tabs">
-                <li class="active">
-                    <a data-toggle="tab" href="#step-notes"></a>
-                </li>
-            </ul>
-        <div class="tab-content">
-            <div class="active" id="step-notes">
-                <form id="contact-form" class="contact-form" method="post" action="">                    
-                    <div class="row text-center">
-                        <div class="contact-form-inner col-md-8 col-sm-12 col-xs-12 col-md-offset-2 col-sm-offset-0 xs-offset-0">
-                            <div class="row">                                                           
-                                <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-                                    <label class="sr-only" for="cname">email</label>
-                                    <input type="text" class="form-control" id="cname" name="name" placeholder="邮箱" minlength="5" required>
-                                </div>                    
-                                <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-                                    <label class="sr-only" for="cname">title</label>
-                                    <input type="text" class="form-control" id="cname" name="name" placeholder="题目" minlength="2" required>
-                                </div>                    
-                                <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-                                    <label class="sr-only" for="cmessage">Your message</label>
-                                    <textarea class="form-control" id="cmessage" name="message" placeholder="请描述您的问题" rows="12" required></textarea>
-                                </div>
-                                 <div class="col-md-12 col-sm-12 col-xs-12 form-group">
-                                    <button type="submit" class="btn btn-block btn-cta btn-cta-primary">发送</button>
-                                </div>                           
-                            </div><!--//row-->
-                        </div>
-                    </div><!--//row-->
-                    <div id="form-messages"></div>
-                </form><!--//contact-form-->
-            </div>
+        <div class="col-md-12">
+          <strong>For discussion visit our <a href="https://onemonth.com/community">Community Section</a></strong>
         </div>
-    </div> <!-- /container -->
+      </div>
+    </div>
+  <h1>有任何问题 ？</h1>
+    <ul class="nav nav-tabs">
+        <li class="active">
+            <a data-toggle="tab" href="#step-notes"></a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="active" id="step-notes">
+            <form id="contact-form" class="contact-form" method="post" action="">                    
+                <div class="row text-center">
+                    <div class="contact-form-inner col-md-8 col-sm-12 col-xs-12 col-md-offset-2 col-sm-offset-0 xs-offset-0">
+                        <div class="row">                                                           
+                            <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                <label class="sr-only" for="cname">email</label>
+                                <input type="text" class="form-control" id="cname" name="name" placeholder="邮箱" minlength="5" required>
+                            </div>                    
+                            <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                <label class="sr-only" for="cname">title</label>
+                                <input type="text" class="form-control" id="cname" name="name" placeholder="题目" minlength="2" required>
+                            </div>                    
+                            <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                <label class="sr-only" for="cmessage">Your message</label>
+                                <textarea class="form-control" id="cmessage" name="message" placeholder="请描述您的问题" rows="12" required></textarea>
+                            </div>
+                             <div class="col-md-12 col-sm-12 col-xs-12 form-group">
+                                <button type="submit" class="btn btn-block btn-cta btn-cta-primary">发送</button>
+                            </div>                           
+                        </div><!--//row-->
+                    </div>
+                </div><!--//row-->
+                <div id="form-messages"></div>
+            </form><!--//contact-form-->
+        </div>
+    </div>
+  </div>
+</div> <!-- /container -->
+
     <!-- *****CONFIGURE STYLE****** -->  
     <div class="config-wrapper">
         <div class="config-wrapper-inner">
